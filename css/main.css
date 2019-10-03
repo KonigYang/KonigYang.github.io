@@ -3,35 +3,47 @@
     width: 800px;
     height: 100px;
     color:white;
-    background-color: #5E8587;
+    background-color: rgba(128,128,128,0.5);
     position:fixed;
 }
 #nav {
-    width: 150px;
-/*    background-color: #DDD7CB;*/
-    position:fixed;
-    margin-left: -150px;
-}
-
-#content {
-    width: 800px;
-    background-color:#f7f7f7;
+    width: 100px;
+    height: 200px;
+    background-color: #DDD7CB;
     float:left;
+    position: fixed;
+    margin-left: -100px;
 }
-
-#content div{
-    padding-top: 100px;
-    height:400px;
-    padding-left: 5px;
+#nav li{
+    display:block;
+    background-color: gold;
+    
+    margin-top:5px;
+    box-shadow: 1px 0px 2px 1px gray;
+}
+#nav li:hover {
+    background-color: chartreuse;
+}
+#nav a{
+    color:blueviolet;
+    text-decoration: none;
+}
+ul{
+    padding-left: 10px;
+}
+#content {
+    width: 600px;
+    height: 1500px;
+    background-color:#F7F7F7;
+    float:left;
+    margin-left: 100px;
 }
 
 #supporting {
-    width: 150px;
-    height: 800px;
+    width: 100px;
+    height: 150px;
     background-color:#B2B7B7;
-    margin-top: 100px;
-    position:fixed;
-    margin-left:810px;
+    float:left;
 }
 #footer {
     width: 800px;
@@ -40,42 +52,24 @@
     background-color:#8A8A6E;
     clear:both;
 }
+#content div{
+    min-height: 200px;
+}
 
 #nav, #content, #supporting{
-    margin-top:100px;
+    margin-top: 100px;
 }
-
-.container{
-    padding: 5px;
+body {
+    margin: 0px;
 }
-
-body{
+#wrapper{
     width: 800px;
-    margin:0 auto;
-    
+    margin: 0 auto;
 }
-
-#nav li{
-    display:block;
-    margin: 5px;
-    padding: 5px;
-    background-color: #DDD7CB;
-    text-align: right;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+.container{
+    padding:10px;
 }
-
-#nav li a{
-    text-decoration: none;
-    color:black;
-/*    text-shadow: 0px 0px 1px black;*/
+.item{
+    padding-top:100px;
+    margin-top: 100px;
 }
-
-
-/*
-#content div div h1{
-    border: 1px dotted crimson;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: rgba(220, 20, 60, 0.1);
-}
-*/
