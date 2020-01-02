@@ -47,8 +47,20 @@ text = "name,type,value,date\n\
 加拿大,Korean,33188,2010\n\
 加拿大,Korean,32255,2011\n"
 
-var data = d3.csvParse(text);
-draw(data);
+var ranking_chart_show = false;
+$(window).scroll(function () {
+    if (isScrolledIntoView('#ranking_chart')) {
+        if (ranking_chart_show) {
+            return;
+        }
+        ranking_chart_show = true;
+        var data = d3.csvParse(text);
+        draw(data);
+    } else{
+        ranking_chart_show = false;
+        $("#ranking_chart").empty();
+    }
+});
 
 
 function draw(data) {

@@ -12,7 +12,7 @@
   max_number: 20,
 
   // 控制是否显示顶部附加信息文字。
-  showMessage: true,
+  showMessage: false,
 
   // 时间自动排序。
   // !!!请确保打开此项时，使用的是标准日期格式！(即：YYYY-MM-DD HH:MM)
