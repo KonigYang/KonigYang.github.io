@@ -1,75 +1,117 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <!-- Primary Meta Tags -->
-    <title>Web108</title>
-    <meta name="title" content="Web108">
-    <meta name="description" content="Pure html + CSS tutorials">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://homepage.ntu.edu.tw/~jerryhsieh/web108/">
-    <meta property="og:title" content="Web108">
-    <meta property="og:description" content="Pure html + CSS tutorials">
-    <meta property="og:image" content="http://homepage.ntu.edu.tw/~jerryhsieh/web108/assets/2048.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="http://homepage.ntu.edu.tw/~jerryhsieh/web108/">
-    <meta property="twitter:title" content="Web108">
-    <meta property="twitter:description" content="Pure html + CSS tutorials">
-    <meta property="twitter:image" content="http://homepage.ntu.edu.tw/~jerryhsieh/web108/assets/2048.png">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/d3bar.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <title>旅臺客從何處來</title>
 </head>
 
-<body>
-    <div id="banner">
-        <img src="assets/2048.png" height=100% style="float:left"> 
-        <h1 class="container" style="float:left">Here is banner</h1>
-        
-    </div>
-    <div id="nav">
-        <ul class="container">
-            <li><a href="#announce">Announce us</a></li>
-            <li><a href="#trending">Trending</a></li>
-            <li><a href="#selected">Selected</a></li>
-            <li><a href="#member">Members</a></li>
-            <li><a href="#message">Message</a></li>
-        </ul>
-    </div>
-    <div id="content">
-        <div id="announce">
-            <h1>Announce</h1>
-        </div>
-        <div id="trending">
-            <h1>Trending</h1>
-        </div>
-        <div id="selected">
-            <h1>Selected</h1>
-            <a href="https://haoyunyunyun.github.io/finalll/">site1</a>
-            <a href="http://homepage.ntu.edu.tw/~r03342020/YemenWar/">site2</a>
-            <a href="http://homepage.ntu.edu.tw/~f04527014/">site3</a>
-            <a href="https://verabela.github.io/WebDeisgn_g2.github.io/">site4</a>
-            <a href="https://shihchenhung.github.io/public/">site5</a>
-        </div>
-        <div id="member">
-            <h1>Members</h1>
-        </div>
-        <div id="message">
-            <h1>Information</h1>
-            <iframe scrolling="NO" src="https://historical.findrate.tw/graph.php?cur=USD&amp;m=3m" scrolling="no" frameborder="0" style="position: relative; height: 350px; width: 100%;"></iframe>
-            <iframe scrolling="NO" src="https://historical.findrate.tw/graph.php?cur=JPY&amp;m=3m" scrolling="no" frameborder="0" style="position: relative; height: 350px; width: 100%;"></iframe>
-        </div>
-    </div>
-    <div id="supporting">
+<body class="graphics" style="visibility: visible;">
+    <div class="main">
 
-        <p class="container">Here for extra information</p>
-    </div>
-    <div id="footer">
-        <p class="container">footer</p>
+        <div class="pg-header" style="height: 700px;">
+            <img src="assets/images/cover.jpg" id=start-cover>
+            <div class="pg-headline">
+                <h1 class="display-3 text-center">旅臺客從何處來</h1>
+                <hr class="topdivider">
+                <p class="text-center" style="font-size: 20px;">近十年各國來臺旅客分析 </p>
+            </div>
+        </div>
+
+        <div id="container-1" class="container fill" style="margin-top: 100px;">
+            <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                <h1 style="text-align: center;">旅臺目的一覽</h1>
+            </div>
+            <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                <div class="col-lg-8 col-md-10 col-12" style="padding-left: 0px;">
+                    <div class="jumbotron" "style=min-height:800px;background-color:dimgery;">
+                        <!--
+                        <div id="svg04" class="container" style="padding-left:0;padding-right:0;padding-bottom: 0;padding-top: 0;">
+                            <svg></svg>
+                        </div>
+                        -->
+                        <canvas id="Purpose_chart"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-2" style="padding-top: 16%;">
+                    <h1 style="font-size: 30px;text-align: center;background-color:floralwhite;border:4px #FFD382 groove;">觀光客佔比74%<br>是最大宗的旅臺客群</h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="container-2-1" class="container-fluid" style="margin-top: 250px;position: absolute;">
+            <h2 class=text-info style="font-size: 26px;">近十年(2009~2018)旅臺觀光客總量變化</h2>
+            <div class="row">
+                <div id="chart1" class="col-lg-6">
+                    <canvas id="Traveler_num_chart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div id="container-2-2" class="container-fluid" style="background-color: bisque; z-index: 0;">
+            <div class="row align-items-center" style="min-height: 90vh;">
+                <div class="offset-lg-8 col-lg-4"></div>
+            </div>
+            <div id="event1" class="row align-items-center" style="min-height: 100vh;">
+                <div class="offset-lg-7 col-lg-5">
+                    <p class="chart2-title">人數變化事件一</p>
+                    <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
+                </div>
+            </div>
+            <div id="event2" class="row align-items-center" style="min-height: 100vh;">
+                <div class="offset-lg-7 col-lg-5">
+                    <p class="chart2-title">人數變化事件二</p>
+                    <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
+                </div>
+            </div>
+            <div id="event3" class="row align-items-center" style="min-height: 100vh;">
+                <div class="offset-lg-7 col-lg-5">
+                    <p class="chart2-title">人數變化事件三</p>
+                    <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div id="container3" style="height: 1000px;">
+            <div id="container-3-1" class="container-fluid" style="background-color: darksalmon; padding-top: 50px; position: relative;">
+                <div class="pg-header">
+                    <h1 class="display-3 text-center" style="color:black;">各國來臺觀光人數比較</h1>
+                </div>
+                <div class="row align-items-center " style="max-height: 70vh;">
+                    <div class="col-lg-8" style="margin-left: 16.666667%;">
+                        <canvas id="rankchart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        !-->
+        <div id="container3" style="height: 1000px;">
+            <svg width="1000" height="600"></svg>
+            <script src="script/config.js"></script>
+            <script src="script/imgs.js"></script>
+            <script src="script/color_ranges.js"></script>
+            <script src="script/visual.js"></script>
+            <link rel="stylesheet" href="styles/d3bar.css">
+        </div>
     </div>
 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script/scrolling.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+    <script src="script/chart.js"></script>
 </body>
 
 </html>
