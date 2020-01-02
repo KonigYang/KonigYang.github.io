@@ -1,4 +1,4 @@
-Chart.defaults.global.animation.duration = 1000;
+Chart.defaults.global.animation.duration = 0;
 
 window.chartColors = {
     red: 'rgb(255, 99, 132)',
@@ -36,15 +36,25 @@ $(window).scroll(function () {
                 data: {
                     labels: ["展覽", "醫療", "求學", "會議", "探親", "業務", "觀光"], // 標題
                     datasets: [{
-                        //label: "", // 標籤
+                        label: "", // 標籤
                         data: [78636, 383382, 505488, 521268, 2495204, 5998463, 53773516], // 資料
                         backgroundColor: [ // 背景色
-                        "#FF0000",
-                        "#00FF00",
-                        "#0000FF",
+                        'rgb(255, 99, 132)',
+                        'rgb(255, 205, 86)',
+                        'rgb(75, 192, 192)',
+                        'rgb(54, 162, 235)',
+                        'rgb(153, 102, 255)',
+                        'rgb(255, 159, 64)',
+                        'rgb(255, 99, 132)'
                         ],
+                        borderColor: 'rgba(0, 0, 0, 1)',
                         borderWidth: 1 // 外框寬度
                     }]
+                },
+                options: {
+                    legend: {
+                        display: false
+                    }
                 }
             });
     } else {
@@ -80,10 +90,10 @@ var myChart = new Chart(Traveler_num_chart, {
                 }
 				}]
         },
-        legend:{
+        legend: {
             display: false
-        }  
-    }
+        },
+    },
 });
 
 var event1_show = false;
@@ -93,16 +103,16 @@ var event3_show = false;
 var all_event_show = false;
 
 $(window).scroll(function () {
-    if ($(window).scrollTop()>= $('#event1').offset().top-200 && $(window).scrollTop()< $('#event2').offset().top-200){
-        
+    if ($(window).scrollTop() >= $('#event1').offset().top - 200 && $(window).scrollTop() < $('#event2').offset().top - 200) {
+
         all_event_show = false;
         event2_show = false;
         event3_show = false;
-        
-        if(event1_show){
+
+        if (event1_show) {
             return;
         }
-        
+
         event1_show = true;
         myChart.data.datasets = [{
             label: '',
@@ -118,18 +128,17 @@ $(window).scroll(function () {
             backgroundColor: 'rgba(0, 0, 0, 0)',
             fill: false,
         }]
-        myChart.update();  
-    }
-    else if ($(window).scrollTop()>= $('#event2').offset().top-200 && $(window).scrollTop()< $('#event3').offset().top-200){
-        
+        myChart.update();
+    } else if ($(window).scrollTop() >= $('#event2').offset().top - 200 && $(window).scrollTop() < $('#event3').offset().top - 200) {
+
         all_event_show = false;
         event1_show = false;
         event3_show = false;
-        
-        if(event2_show){
+
+        if (event2_show) {
             return;
         }
-        
+
         event2_show = true;
         myChart.data.datasets = [{
             label: '',
@@ -145,19 +154,17 @@ $(window).scroll(function () {
             backgroundColor: 'rgba(0, 0, 0, 0)',
             fill: false,
         }]
-        myChart.update();  
-    }
-    
-    else if ($(window).scrollTop()>= $('#event3').offset().top-200){
-        
+        myChart.update();
+    } else if ($(window).scrollTop() >= $('#event3').offset().top - 200) {
+
         all_event_show = false;
         event1_show = false;
         event2_show = false;
-        
-        if(event3_show){
+
+        if (event3_show) {
             return;
         }
-        
+
         event3_show = true;
         myChart.data.datasets = [{
             label: '',
@@ -173,15 +180,13 @@ $(window).scroll(function () {
             backgroundColor: 'rgba(0, 0, 0, 0)',
             fill: false,
         }]
-        myChart.update();  
-    }
-    
-    else{
+        myChart.update();
+    } else {
         event1_show = false;
         event2_show = false;
         event3_show = false;
-        
-        if(all_event_show){
+
+        if (all_event_show) {
             return;
         }
         all_event_show = true;
@@ -196,23 +201,3 @@ $(window).scroll(function () {
         myChart.update();
     }
 })
-
-//Part3 figure
-var rankchart = document.getElementById("rankchart");
-var mychart3 = new Chart(rankchart, {
-        // 參數設定[註1]
-        type: "horizontalBar", // 圖表類型
-        data: {
-            labels: ["展覽", "醫療", "求學", "會議", "探親", "業務", "觀光"], // 標題
-            datasets: [{
-                //label: "", // 標籤
-                data: [78636, 383382, 505488, 521268, 2495204, 5998463, 53773516], // 資料
-                backgroundColor: [ // 背景色
-                "#FF0000",
-                "#00FF00",
-                "#0000FF",
-                ],
-                borderWidth: 1 // 外框寬度
-            }]
-        }
-    });

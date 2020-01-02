@@ -1,44 +1,37 @@
 body {
-    position: relative;
     margin: 0;
     display: block;
     font-size: 1rem;
     font-family: "Microsoft JhengHei";
-
 }
 
-.pg-header {
+header.masthead {
     position: relative;
-    overflow: hidden;
+    background: url("../assets/images/cover.jpg") no-repeat center center;
+    background-size:cover;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
 }
 
-#start-cover {
-    position: absolute;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.pg-headline {
-    position: absolute;
-    top: 32%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
 }
 
 .display-3 {
     font-weight: 550;
     line-height: 1.1;
-    font-size: 40px;
+    font-size: 50px;
 }
 .text-center{
     text-align: center;
 }
 
-.offset-lg-2{
-    margin-left: 8.33333333%;
-}
 .offset-md-1{
     margin-left: 8.33333333%;
 }
@@ -54,6 +47,22 @@ hr.topdivider{
     border-bottom: 1px solid #cd2fda;
 }
 
+.text-emerge-animation{ 
+    animation-name: emerge;
+    animation-duration: 3s;
+}
+@keyframes emerge{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#container-0{
+    position:relative;
+}
 #container-1{
     position:relative;
     margin-left: auto;
@@ -62,8 +71,12 @@ hr.topdivider{
 /* Part2-1*/
 .fixed{
     position:fixed!important;
-    top:0px;
+    top: 0px;
     z-index: 10;
+}
+.absolute_position_1{
+    height:4000px;
+    padding-top: 2175px;
 }
 .released{
     top:0px;
