@@ -9,7 +9,7 @@
   encoding: "UTF-8",
 
   // 每个时间节点最多显示的条目数。
-  max_number: 20,
+  max_number: 10,
 
   // 控制是否显示顶部附加信息文字。
   showMessage: false,
@@ -62,7 +62,7 @@
 
   // 榜首项目信息的水平位置 。
   // Top item information horizontal location
-  item_x: 250,
+  item_x: 200,
 
   // 时间点间隔时间。
   interval_time: 1,
@@ -107,16 +107,16 @@
 
   // 图表左右上下间距。
   // 注意，left_margin不包括左侧的label，修改数值较小会导致左侧label不显示
-  left_margin: 250,
+  left_margin: 100,
   right_margin: 150,
-  top_margin: 180,
+  top_margin: 50,
   bottom_margin: 0,
 
   // 是否开启时间标签。
   dateLabel_switch: true,
   // 时间标签坐标。建议x：1000 y：-50开始尝试，默认位置为x:null,y:null
-  dateLabel_x: null,
-  dateLabel_y: null,
+  //dateLabel_x: 0,
+  //dateLabel_y: 0,
 
   // 允许大于平均值的条消失时上浮。
   allow_up: false,

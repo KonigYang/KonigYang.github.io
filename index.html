@@ -53,7 +53,7 @@
         </nav>
 
         <div id="container-0" class="container-fluid text-center" style="padding-top: 15rem; padding-bottom: 15rem;">
-            <div class="row text-emerge">
+            <div class="row text-emerge1">
                 <div class="col-lg-6 offset-lg-3">
                     <p style="font-size:1.8rem;">近年來旅臺人次逾千萬人，臺灣觀光產業是否有因而蓬勃發展? 我們將分析旅臺目的、歷年人次變化、不同國家、城市的來臺趨勢，帶您一窺臺灣觀光業的興衰。</p>
                 </div>
@@ -63,73 +63,68 @@
         <div id="container-1-index" class="container" style="min-height: 100px;"></div>
 
         <div id="container-1" class="container fill text-center">
-            <h1>旅臺目的一覽</h1>
+            <h1>旅臺目的比較</h1>
             <div class="row" style="margin-left: 0px;margin-right: 0px; margin-top: 5%; margin-bottom: 5%;">
                 <div class="col-lg-8 offset-lg-2" style="padding-left: 0%;">
                     <canvas id="Purpose_chart"></canvas>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2 mb-5">
-                <h1 style="font-size: 30px;text-align: center;background-color:floralwhite;border:4px #FFD382 groove;">觀光客佔比74%<br>是最大宗的旅臺客群</h1>
-            </div>
-        </div>
-    </div>
 
-    <div id="container-2-1" class="container-fluid" style="margin-top: 250px; position: absolute; padding-left: 10%;">
-        <h2 class=text-info style="font-size: 26px;">近十年(2009~2018)旅臺觀光客總量變化</h2>
-        <div class="row">
-            <div id="chart1" class="col-lg-6">
-                <canvas id="Traveler_num_chart"></canvas>
-            </div>
-        </div>
-    </div>
-    <div id="container-2-2" class="container-fluid" style="background-color: bisque; z-index: 0; padding-right: 5%;">
-        <div class="row align-items-center" style="min-height: 90vh;">
-            <div class="offset-lg-8 col-lg-4"></div>
-        </div>
-        <div id="event1" class="row align-items-center" style="min-height: 100vh;">
-            <div class="offset-lg-7 col-lg-5">
-                <p class="chart2-title">人數變化事件一</p>
-                <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
-            </div>
-        </div>
-        <div id="event2" class="row align-items-center" style="min-height: 100vh;">
-            <div class="offset-lg-7 col-lg-5">
-                <p class="chart2-title">人數變化事件二</p>
-                <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
-            </div>
-        </div>
-        <div id="event3" class="row align-items-center" style="min-height: 100vh;">
-            <div class="offset-lg-7 col-lg-5">
-                <p class="chart2-title">人數變化事件三</p>
-                <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
-            </div>
-        </div>
-    </div>
-    <!--
-        <div id="container3" style="height: 1000px;">
-            <div id="container-3-1" class="container-fluid" style="background-color: darksalmon; padding-top: 50px; position: relative;">
-                <div class="pg-header">
-                    <h1 class="display-3 text-center" style="color:black;">各國來臺觀光人數比較</h1>
-                </div>
-                <div class="row align-items-center " style="max-height: 70vh;">
-                    <div class="col-lg-8" style="margin-left: 16.666667%;">
-                        <canvas id="rankchart"></canvas>
-                    </div>
+            <div class="row text-emerge2" style="opacity: 0;">
+                <div class="col-lg-8 offset-lg-2 mb-5">
+                    <h1 style="font-size: 30px;text-align: center;background-color:floralwhite;border:4px #FFD382 groove;">觀光客佔比74%，是最大宗的旅臺族群</h1>
                 </div>
             </div>
         </div>
-        !-->
-    <div id="container3" style="height: 1000px;">
-        <svg width="1000" height="600" id="ranking_chart"></svg>
-        <script src="script/config.js"></script>
-        <script src="script/imgs.js"></script>
-        <script src="script/color_ranges.js"></script>
-        <script src="script/visual.js"></script>
-        <link rel="stylesheet" href="styles/d3bar.css">
-    </div>
+
+
+        <div id="container-2-1" class="container-fluid" style="padding-top: 20%; position: absolute; padding-left: 5%;">
+            <div class="row">
+                <div id="chart1_title" class="col-lg-6">
+                    <h2 class="text-info" style="font-size: 26px; margin-left: 8%;">旅臺觀光客總量變化(2009~2018)</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div id="chart1" class="col-lg-6">
+                    <canvas id="Traveler_num_chart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div id="container-2-2" class="container-fluid" style="z-index: 0; padding-right: 5%;">
+            <div class="row align-items-center" style="min-height: 90vh;">
+                <div class="offset-lg-7 col-lg-5">
+                </div>
+            </div>
+            <div id="event1" class="row align-items-center" style="min-height: 100vh;">
+                <div class="offset-lg-7 col-lg-5">
+                    <p class="chart2-title">人數變化事件一</p>
+                    <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
+                </div>
+            </div>
+            <div id="event2" class="row align-items-center" style="min-height: 100vh;">
+                <div class="offset-lg-7 col-lg-5">
+                    <p class="chart2-title">人數變化事件二</p>
+                    <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
+                </div>
+            </div>
+            <div id="event3" class="row align-items-center" style="min-height: 100vh;">
+                <div class="offset-lg-7 col-lg-5">
+                    <p class="chart2-title">人數變化事件三</p>
+                    <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="container3" class="text-center" style="padding-top: 10%;">
+            <h1 style="margin-bottom: 0%;">各國旅客排名</h1>
+            <svg width="1000" height="600" id="ranking_chart"></svg>
+            <script src="script/config.js"></script>
+            <script src="script/imgs.js"></script>
+            <script src="script/color_ranges.js"></script>
+            <script src="script/visual.js"></script>
+            <link rel="stylesheet" href="styles/d3bar.css">
+        </div>
+
     </div>
 
 

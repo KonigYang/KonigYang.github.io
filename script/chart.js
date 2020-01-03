@@ -54,6 +54,18 @@ $(window).scroll(function () {
                 options: {
                     legend: {
                         display: false
+                    },
+                    animation: {
+                        duration: 1000,
+                        easing: 'easeInCubic'
+                    },
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                fontSize: 25,
+                                fontFamily: "DFKai-SB",
+                            }
+                        }]
                     }
                 }
             });
@@ -93,6 +105,9 @@ var myChart = new Chart(Traveler_num_chart, {
         legend: {
             display: false
         },
+        animation: {
+            duration: 1000
+        }
     },
 });
 
@@ -128,6 +143,7 @@ $(window).scroll(function () {
             backgroundColor: 'rgba(0, 0, 0, 0)',
             fill: false,
         }]
+        myChart.options.animation.duration=0;
         myChart.update();
     } else if ($(window).scrollTop() >= $('#event2').offset().top - 200 && $(window).scrollTop() < $('#event3').offset().top - 200) {
 

@@ -51,12 +51,35 @@ hr.topdivider{
     animation-name: emerge;
     animation-duration: 3s;
 }
+.text-emerge-animation-slow{ 
+    animation-name: emerge;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
 @keyframes emerge{
     from{
         opacity: 0;
     }
     to{
         opacity: 1;
+    }
+}
+
+.zoomout-animation{ 
+    animation-name: zoomout;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes zoomout{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
     }
 }
 
@@ -71,12 +94,13 @@ hr.topdivider{
 /* Part2-1*/
 .fixed{
     position:fixed!important;
-    top: 0px;
+    top: 57px;
     z-index: 10;
 }
+
+
 .absolute_position_1{
-    height:4000px;
-    padding-top: 2175px;
+    position:relative;
 }
 .released{
     top:0px;

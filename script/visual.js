@@ -10,42 +10,146 @@
 // require("./stylesheet.css");
 
 text = "name,type,value,date\n\
-中國,Chinese,539106,2009\n\
-中國,Chinese,1228086,2010\n\
-中國,Chinese,1290933,2011\n\
-日本,Japanese,662644,2009\n\
-日本,Japanese,701561,2010\n\
-日本,Japanese,902733,2011\n\
-香港,Russian,513219,2009\n\
-香港,Russian,530992,2010\n\
-香港,Russian,521523,2011\n\
-韓國,English,64794,2009\n\
-韓國,English,99241,2010\n\
-韓國,English,133793,2011\n\
-馬來西亞,Korean,107414,2009\n\
-馬來西亞,Korean,209930,2010\n\
-馬來西亞,Korean,230368,2011\n\
-新加坡,Korean,121988,2009\n\
-新加坡,Korean,157046,2010\n\
-新加坡,Korean,214113,2011\n\
-泰國,Korean,10930,2009\n\
-泰國,Korean,14164,2010\n\
-泰國,Korean,23195,2011\n\
-菲律賓,Korean,11877,2009\n\
-菲律賓,Korean,15165,2010\n\
-菲律賓,Korean,19709,2011\n\
-美國,Korean,103557,2009\n\
-美國,Korean,111093,2010\n\
-美國,Korean,101673,2011\n\
-越南,Korean,1806,2009\n\
-越南,Korean,3349,2010\n\
-越南,Korean,4490,2011\n\
-澳門,Korean,25255,2009\n\
-澳門,Korean,29090,2010\n\
-澳門,Korean,32234,2011\n\
-加拿大,Korean,30184,2009\n\
-加拿大,Korean,33188,2010\n\
-加拿大,Korean,32255,2011\n"
+中國,country,539106,2009\n\
+中國,country,1228086,2010\n\
+中國,country,1290933,2011\n\
+中國,country,2019757,2012\n\
+中國,country,2263635,2013\n\
+中國,country,3393346,2014\n\
+中國,country,3437425,2015\n\
+中國,country,2845547,2016\n\
+中國,country,2093548,2017\n\
+中國,country,2045644,2018\n\
+日本,country,662644,2009\n\
+日本,country,701561,2010\n\
+日本,country,902733,2011\n\
+日本,country,1037067,2012\n\
+日本,country,1019113,2013\n\
+日本,country,1195340,2014\n\
+日本,country,1187552,2015\n\
+日本,country,1379233,2016\n\
+日本,country,1449246,2017\n\
+日本,country,1439450,2018\n\
+香港,country,513219,2009\n\
+香港,country,530992,2010\n\
+香港,country,521523,2011\n\
+香港,country,574960,2012\n\
+香港,country,947924,2013\n\
+香港,country,1093490,2014\n\
+香港,country,1205125,2015\n\
+香港,country,1281043,2016\n\
+香港,country,1349542,2017\n\
+香港,country,1310147,2018\n\
+韓國,country,64794,2009\n\
+韓國,country,99241,2010\n\
+韓國,country,133793,2011\n\
+韓國,country,158205,2012\n\
+韓國,country,241440,2013\n\
+韓國,country,390768,2014\n\
+韓國,country,508226,2015\n\
+韓國,country,693224,2016\n\
+韓國,country,884271,2017\n\
+韓國,country,823620,2018\n\
+馬來西亞,country,107414,2009\n\
+馬來西亞,country,209930,2010\n\
+馬來西亞,country,230368,2011\n\
+馬來西亞,country,262935,2012\n\
+馬來西亞,country,307755,2013\n\
+馬來西亞,country,339110,2014\n\
+馬來西亞,country,321270,2015\n\
+馬來西亞,country,339710,2016\n\
+馬來西亞,country,395198,2017\n\
+馬來西亞,country,378371,2018\n\
+新加坡,country,121988,2009\n\
+新加坡,country,157046,2010\n\
+新加坡,country,214113,2011\n\
+新加坡,country,243034,2012\n\
+新加坡,country,273245,2013\n\
+新加坡,country,278919,2014\n\
+新加坡,country,290180,2015\n\
+新加坡,country,292240,2016\n\
+新加坡,country,321581,2017\n\
+新加坡,country,314229,2018\n\
+泰國,country,10930,2009\n\
+泰國,country,14164,2010\n\
+泰國,country,23195,2011\n\
+泰國,country,27525,2012\n\
+泰國,country,37062,2013\n\
+泰國,country,34344,2014\n\
+泰國,country,52640,2015\n\
+泰國,country,110116,2016\n\
+泰國,country,201729,2017\n\
+泰國,country,214725,2018\n\
+菲律賓,country,11877,2009\n\
+菲律賓,country,15165,2010\n\
+菲律賓,country,19709,2011\n\
+菲律賓,country,23011,2012\n\
+菲律賓,country,20953,2013\n\
+菲律賓,country,25282,2014\n\
+菲律賓,country,30153,2015\n\
+菲律賓,country,48198,2016\n\
+菲律賓,country,138128,2017\n\
+菲律賓,country,211138,2018\n\
+美國,country,103557,2009\n\
+美國,country,111093,2010\n\
+美國,country,101673,2011\n\
+美國,country,106843,2012\n\
+美國,country,111016,2013\n\
+美國,country,131714,2014\n\
+美國,country,143140,2015\n\
+美國,country,166044,2016\n\
+美國,country,201170,2017\n\
+美國,country,198761,2018\n\
+越南,country,1806,2009\n\
+越南,country,3349,2010\n\
+越南,country,4490,2011\n\
+越南,country,6775,2012\n\
+越南,country,7774,2013\n\
+越南,country,9513,2014\n\
+越南,country,13187,2015\n\
+越南,country,36839,2016\n\
+越南,country,171781,2017\n\
+越南,country,193793,2018\n\
+澳門,country,25255,2009\n\
+澳門,country,29090,2010\n\
+澳門,country,32234,2011\n\
+澳門,country,37866,2012\n\
+澳門,country,61938,2013\n\
+澳門,country,81077,2014\n\
+澳門,country,103165,2015\n\
+澳門,country,116190,2016\n\
+澳門,country,126466,2017\n\
+澳門,country,121915,2018\n\
+加拿大,country,30184,2009\n\
+加拿大,country,33188,2010\n\
+加拿大,country,32255,2011\n\
+加拿大,country,35877,2012\n\
+加拿大,country,37679,2013\n\
+加拿大,country,45389,2014\n\
+加拿大,country,43858,2015\n\
+加拿大,country,54987,2016\n\
+加拿大,country,63424,2017\n\
+加拿大,country,67146,2018\n\
+澳洲,country,23993,2009\n\
+澳洲,country,26932,2010\n\
+澳洲,country,28151,2011\n\
+澳洲,country,32635,2012\n\
+澳洲,country,34133,2013\n\
+澳洲,country,38974,2014\n\
+澳洲,country,34534,2015\n\
+澳洲,country,37355,2016\n\
+澳洲,country,45818,2017\n\
+澳洲,country,51785,2018\n\
+印尼,country,13285,2009\n\
+印尼,country,19067,2010\n\
+印尼,country,31286,2011\n\
+印尼,country,34669,2012\n\
+印尼,country,35080,2013\n\
+印尼,country,36112,2014\n\
+印尼,country,32004,2015\n\
+印尼,country,32868,2016\n\
+印尼,country,48186,2017\n\
+印尼,country,49597,2018\n"
 
 var ranking_chart_show = false;
 $(window).scroll(function () {
@@ -176,7 +280,7 @@ function draw(data) {
 
   const width = svg.attr("width");
   const height = svg.attr("height");
-  const innerWidth = width - margin.left - margin.right;
+  const innerWidth = width - margin.left - margin.right - 50;
   const innerHeight = height - margin.top - margin.bottom - 32;
   //var dateLabel_y = height - margin.top - margin.bottom - 32;;
   const xValue = d => Number(d.value);
@@ -614,6 +718,7 @@ function draw(data) {
       })
       .attr("y", 2)
       .attr("dy", ".5em")
+      .attr("dx", "0em")
       .attr("text-anchor", function () {
         if (long) return "start";
         return "end";
