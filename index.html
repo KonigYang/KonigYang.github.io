@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/d3bar.css">
+    <link rel="stylesheet" type="text/css" href="styles/navbar.css">
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <title>旅臺客從何處來</title>
 </head>
@@ -26,12 +27,12 @@
             </div>
         </header>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container" style="width:100%;">
+        <nav class="navbar navbar-default navbar-expand-lg navbar-dark fixed-top">
+            <div class="container" style="width:100%;padding-right: 0;margin-right: 0;padding-top: 5px;padding-bottom: 5px;">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive" style="margin-left: 33%;">
+                <div class="collapse navbar-collapse" id="navbarResponsive" style="margin-left: 38%;">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#">首頁
@@ -42,10 +43,16 @@
                             <a class="nav-link" href="#container-1-index">旅臺目的</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#container-2-1">總人次變化</a>
+                            <a class="nav-link" href="#container-2-1">觀光客人數變化</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#container3">各國旅客排名</a>
+                            <a class="nav-link" href="#container3">來台國家排名</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#container3">各國來台狀況分析</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#container3">航運資料分析</a>
                         </li>
                     </ul>
                 </div>
@@ -63,23 +70,35 @@
         <div id="container-1-index" class="container" style="min-height: 100px;"></div>
 
         <div id="container-1" class="container fill text-center">
-            <h1>旅臺目的比較</h1>
-            <div class="row" style="margin-left: 0px;margin-right: 0px; margin-top: 5%; margin-bottom: 5%;">
+            <h3>觀光客佔來台旅客74%，一年超過5000萬人次</h3>
+            <hr width="60%">
+            <div class="row" style="margin-left: 0px;margin-right: 0px; margin-top: 5%; margin-bottom: 0%;">
                 <div class="col-lg-8 offset-lg-2" style="padding-left: 0%;">
                     <canvas id="Purpose_chart"></canvas>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <p style="color:#808080">旅臺目的統計(資料來源:交通部觀光局)</p>
+                </div>
+            </div>
 
-            <div class="row text-emerge2" style="opacity: 0;">
+            <div class="row text-emerge2" style="opacity: 0; margin-top: 5%;">
                 <div class="col-lg-8 offset-lg-2 mb-5">
-                    <h1 style="font-size: 30px;text-align: center;background-color:floralwhite;border:4px #FFD382 groove;">觀光客佔比74%，是最大宗的旅臺族群</h1>
+                    <h4 style="text-align: center;background-color:floralwhite;border:4px #FFD382 groove;">列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</h4>
                 </div>
             </div>
         </div>
 
 
-        <div id="container-2-1" class="container-fluid" style="padding-top: 20%; position: absolute; padding-left: 5%;">
-            <div class="row">
+        <div id="container-2-1" class="container-fluid text-center" style="padding-top: 0%; position: absolute; padding-left: 5%; z-index: 10; padding-top: 0%;">
+            <div class="container" style="height:57px; background-color: white;">
+            </div>
+            <h3 style="background-color: white; margin-bottom: 0;">近十年觀光客成長，但幅度日漸趨緩</h3>
+            <div class="row" style="background-color: white;">
+                <hr width="45%">
+            </div>
+            <div class="row" style="padding-top: 5%;">
                 <div id="chart1_title" class="col-lg-6">
                     <h2 class="text-info" style="font-size: 26px; margin-left: 8%;">旅臺觀光客總量變化(2009~2018)</h2>
                 </div>
@@ -89,40 +108,53 @@
                     <canvas id="Traveler_num_chart"></canvas>
                 </div>
             </div>
+            <div class="row" style="padding-left: 20%">
+                <p style="color:#808080">(資料來源:交通部觀光局)</p>
+            </div>
         </div>
-        <div id="container-2-2" class="container-fluid" style="z-index: 0; padding-right: 5%;">
+        <div id="container-2-2" class="container-fluid" style="z-index: 0; padding-right: 5%; z-index:5;">
             <div class="row align-items-center" style="min-height: 90vh;">
                 <div class="offset-lg-7 col-lg-5">
                 </div>
             </div>
             <div id="event1" class="row align-items-center" style="min-height: 100vh;">
                 <div class="offset-lg-7 col-lg-5">
-                    <p class="chart2-title">人數變化事件一</p>
+                    <p class="chart2-title">2011~2013年</p>
                     <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
                 </div>
             </div>
             <div id="event2" class="row align-items-center" style="min-height: 100vh;">
                 <div class="offset-lg-7 col-lg-5">
-                    <p class="chart2-title">人數變化事件二</p>
+                    <p class="chart2-title">2013~2015年</p>
                     <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
                 </div>
             </div>
             <div id="event3" class="row align-items-center" style="min-height: 100vh;">
                 <div class="offset-lg-7 col-lg-5">
-                    <p class="chart2-title">人數變化事件三</p>
+                    <p class="chart2-title">2016~2018年</p>
                     <p>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</p>
                 </div>
             </div>
         </div>
 
         <div id="container3" class="text-center" style="padding-top: 10%;">
-            <h1 style="margin-bottom: 0%;">各國旅客排名</h1>
-            <svg width="1000" height="600" id="ranking_chart"></svg>
+            <h3>中國蟬聯來台旅客榜首，但東南亞旅客後起直追</h3>
+            <hr width="55%">
+            <svg width="800" height="400" id="ranking_chart"></svg>
             <script src="script/config.js"></script>
             <script src="script/imgs.js"></script>
             <script src="script/color_ranges.js"></script>
             <script src="script/visual.js"></script>
             <link rel="stylesheet" href="styles/d3bar.css">
+            <div class="row" style="padding-left: 50%">
+                <p style="color:#808080">(資料來源:交通部觀光局 / 模板:Jannchie)</p>
+            </div>
+            
+            <div class="row" style="padding-top: 5%;">
+                <div class="col-lg-8 offset-lg-2">
+                <h4>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</h4>
+                </div>
+            </div>
         </div>
 
     </div>

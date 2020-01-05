@@ -5,6 +5,16 @@ body {
     font-family: "Microsoft JhengHei";
 }
 
+hr {
+    background: linear-gradient(to right, blue, yellow);
+    height: 5px;
+}
+
+h3 {
+    color: darkblue;
+    font-weight: bold;
+}
+
 header.masthead {
     position: relative;
     background: url("../assets/images/cover.jpg") no-repeat center center;
@@ -30,6 +40,10 @@ header.masthead .overlay {
 }
 .text-center{
     text-align: center;
+}
+
+.title-blue{
+    color: darkblue;
 }
 
 .offset-md-1{
@@ -94,7 +108,7 @@ hr.topdivider{
 /* Part2-1*/
 .fixed{
     position:fixed!important;
-    top: 57px;
+    top: 62px;
     z-index: 10;
 }
 
