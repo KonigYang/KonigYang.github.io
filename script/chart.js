@@ -32,22 +32,22 @@ $(window).scroll(function () {
         var ctx = document.getElementById("Purpose_chart"),
             example = new Chart(ctx, {
                 // 參數設定[註1]
-                type: "bar", // 圖表類型
+                type: "horizontalBar", // 圖表類型
                 data: {
-                    labels: ["展覽", "醫療", "求學", "會議", "探親", "業務", "觀光"], // 標題
+                    labels: ["觀光", "業務","探親","會議","求學","醫療","展覽"], // 標題
                     datasets: [{
                         label: "", // 標籤
-                        data: [78636, 383382, 505488, 521268, 2495204, 5998463, 53773516], // 資料
+                        data: [53773516,5998463,2495204,521268,505488,383382,78636], // 資料
                         backgroundColor: [ // 背景色
-                        'rgb(255, 99, 132)',
-                        'rgb(255, 205, 86)',
-                        'rgb(75, 192, 192)',
-                        'rgb(54, 162, 235)',
-                        'rgb(153, 102, 255)',
-                        'rgb(255, 159, 64)',
-                        'rgb(255, 99, 132)'
+                        'rgb(255, 0, 0)',
+                        'rgb(255, 111, 111)',
+                        'rgb(255, 145, 145)',
+                        'rgb(255, 176, 176)',
+                        'rgb(255, 194, 194)',
+                        'rgb(255, 202, 202)',
+                        'rgb(255, 212, 212)'
                         ],
-                        borderColor: 'rgba(0, 0, 0, 1)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
                         borderWidth: 1 // 外框寬度
                     }]
                 },
@@ -62,7 +62,13 @@ $(window).scroll(function () {
                     scales: {
                         xAxes: [{
                             ticks: {
-                                fontSize: 25,
+                                fontSize: 15,
+                                fontFamily: "DFKai-SB",
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                fontSize: 20,
                                 fontFamily: "DFKai-SB",
                             }
                         }]
@@ -85,21 +91,30 @@ var myChart = new Chart(Traveler_num_chart, {
             label: '',
             data: [4395004, 5567277, 6087484, 7311470, 8016280, 9910204, 10439785, 10690279, 10739601, 11066707],
             backgroundColor: 'rgba(100, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
+            borderColor: 'rgba(255, 0, 0, 1)',
             borderWidth: 1,
             fill: false
         }]
     },
     options: {
+        responsive: true,
         devicePixelRatio: 1,
         tooltips: {
             mode: 'nearest'
         },
         scales: {
+            xAxes: [{
+                gridLines: {
+                    display: false,
+                },    
+            }],
             yAxes: [{
                 ticks: {
                     beginAtZero: false
-                }
+                },
+                gridLines: {
+                    drawBorder: false,
+                },
 				}]
         },
         legend: {
@@ -107,6 +122,11 @@ var myChart = new Chart(Traveler_num_chart, {
         },
         animation: {
             duration: 1000
+        },
+        elements: {
+            point: {
+                radius: 0
+            }
         }
     },
 });

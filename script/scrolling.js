@@ -9,9 +9,10 @@ $(window).scroll(function () {
     var current_pos = $(this).scrollTop();
 
     // bar-height+margin bottom of last row = 57+5=62
-    if (current_pos >= tofix1_height +50 && current_pos < release1_height - height/2) {
+    if (current_pos >= tofix1_height +50 && current_pos < release1_height - height*2/3) {
         $('#container-2-1').addClass('fixed');
-    } else if (current_pos >= release1_height - height/2 && current_pos < release1_height) {
+        $('#container-2-1').removeClass('zoomout-animation');
+    } else if (current_pos >= release1_height - height*2/3 && current_pos < release1_height) {
         $('#container-2-1').addClass('zoomout-animation');
     } else {
         $('#container-2-1').removeClass('fixed');
