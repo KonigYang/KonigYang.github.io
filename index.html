@@ -15,6 +15,8 @@
     <!-- Mapbox -->
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js"></script>
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+    <script src="script/chart.js"></script>
     <title>旅臺客從何處來</title>
 </head>
 
@@ -46,7 +48,7 @@
                             <a class="nav-link" href="#container-1-index">旅臺目的</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#container-2-1">觀光客人數變化</a>
+                            <a class="nav-link" href="#container-2-index">觀光客人數變化</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#container3">來台國家排名</a>
@@ -61,15 +63,7 @@
                 </div>
             </div>
         </nav>
-        <!--
-        <div id="container-0" class="container-fluid text-center" style="padding-top: 15rem; padding-bottom: 15rem;">
-            <div class="row text-emerge1">
-                <div class="col-lg-6 offset-lg-3">
-                    <p style="font-size:1.8rem;">近年來旅臺人次逾千萬人，臺灣觀光產業是否有因而蓬勃發展? 我們將分析旅臺目的、歷年人次變化、不同國家、城市的來臺趨勢，帶您一窺臺灣觀光業的興衰。</p>
-                </div>
-            </div>
-        </div>
-        -->
+
         <div id="container-1-index" class="container" style="min-height: 100px;"></div>
 
         <div id="container-1" class="container fill text-center">
@@ -94,7 +88,8 @@
                 </div>
             </div>
         </div>
-
+        
+        <div id="container-2-index" class="container" style="min-height: 63.6px;"></div>
 
         <div id="container-2-1" class="container-fluid text-center" style="padding-top: 0%; position: absolute; padding-left: 5%; z-index: 10; padding-top: 0%;">
             <div class="container" style="height:57px; background-color: white;">
@@ -166,7 +161,7 @@
         <div id="container4" class="text-center" style="position: static;">
             <h3>各國旅臺遊客人數變化及分析</h3>
             <hr width="35%">
-            <div id="map"></div>
+            <div id="map" style="height:100%;"></div>
             <div id="features">
                 <section id="load_map" class="active">
                     <h4><br><br>請於此區域捲動</h4>
@@ -270,7 +265,8 @@
     <script src="script/animate.js"></script>
     <script src="script/scrolling.js"></script>
     <script src="script/mapbox.js"></script>
+    
     <!-- Chart.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
     <script src="script/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
 </body></html>

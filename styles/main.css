@@ -63,6 +63,7 @@ hr.topdivider {
     border-bottom: 1px solid #cd2fda;
 }
 
+/* Animation */
 .text-emerge-animation {
     animation-name: emerge;
     animation-duration: 3s;
