@@ -12,6 +12,9 @@
     <link rel="stylesheet" type="text/css" href="styles/d3bar.css">
     <link rel="stylesheet" type="text/css" href="styles/navbar.css">
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Mapbox -->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css" rel="stylesheet" />
     <title>旅臺客從何處來</title>
 </head>
 
@@ -49,7 +52,7 @@
                             <a class="nav-link" href="#container3">來台國家排名</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#container3">各國來台狀況分析</a>
+                            <a class="nav-link" href="#container4">各國來台狀況分析</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#container3">航運資料分析</a>
@@ -70,7 +73,7 @@
         <div id="container-1-index" class="container" style="min-height: 100px;"></div>
 
         <div id="container-1" class="container fill text-center">
-            <h3>觀光客佔來台旅客74%，一年超過5000萬人次</h3>
+            <h3>觀光客佔來臺旅客74%，一年超過5000萬人次</h3>
             <hr width="60%">
             <div class="row" style="margin-left: 0px;margin-right: 0px; margin-top: 5%; margin-bottom: 0%;">
                 <div class="col-lg-8 offset-lg-2" style="padding-left: 0%;">
@@ -100,7 +103,7 @@
             </div>
             <div class="row" style="padding-top: 5%;">
                 <div id="chart1_title" class="col-lg-6">
-                    <h2 class="text-info" style="font-size: 26px; margin-left: 8%;">旅臺觀光客總量變化(2009~2018)</h2>
+                    <h2 class="text-info" style="font-size: 20px; margin-left: 8%;">旅臺觀光客總量變化(2009~2018)</h2>
                 </div>
             </div>
             <div class="row">
@@ -146,14 +149,112 @@
             <script src="script/color_ranges.js"></script>
             <script src="script/visual.js"></script>
             <link rel="stylesheet" href="styles/d3bar.css">
-            <div class="row" style="padding-left: 50%">
+            <div id="ranking-chart-text" class="row" style="padding-left: 50%">
                 <p style="color:#808080">(資料來源:交通部觀光局 / 模板:Jannchie)</p>
             </div>
-            
-            <div class="row" style="padding-top: 5%;">
-                <div class="col-lg-8 offset-lg-2">
-                <h4>列南去中在獨雜球要型業清成了我了作刻顯似生本不作量你火是然拿過時任？師分向明會的心地工然下要；險唱關出，面日了也中頭候大，報食。</h4>
+
+            <div class="row" style="padding-top: 5%; padding-bottom: 10%;">
+                <div class="col-lg-6 offset-lg-3">
+                    <h5>從來台遊客人數的前十名排行榜中，可以看出我國在觀光客源的開拓中，中國遊客是近十年來政府著力最深的一部分。在2009年前日本觀光客是來台人數第一名，主因是2009年前中客必須經由香港或小三通模式來台，導致旅遊諸多不便。2010年後，中國則站穩第一，儘管近年來台人數減少，但仍不改變其優勢。但不論如何，台灣周邊的中國、日本、香港，在
+                    近十年來始終盤踞前三名的地位。
+                    四到六名的部分，近八年來則由馬來西亞、新加坡、韓國等國互有領先。韓國則在2014年後穩居第四名。七至十名部分，早期多為美國、加拿大、澳門等地進榜，近年來這些國家日益被泰國、菲律賓、越南等取代，主因是2 0 1 6年後政府持續推動「新南向政策」的結果，使雙方互動日益密切，且有地緣優勢。</h5>
                 </div>
+            </div>
+        </div>
+
+        <div id="container4" class="text-center" style="position: static;">
+            <h3>各國旅臺遊客人數變化及分析</h3>
+            <hr width="35%">
+            <div id="map"></div>
+            <div id="features">
+                <section id="load_map" class="active">
+                    <h4><br><br>請於此區域捲動</h4>
+                    <p>
+                        <br><br><br>
+                    </p>
+                </section>
+                <section id="baker" class="active">
+                    <h2>中國</h2>
+                    <p>《chart.js待製作》</p>
+                    <p>
+                        中國來台旅客人數與兩岸關係的連結最為密切。自2009年起，在國民黨執政下，開啟了兩岸城市的班機直航，促使中國旅客人數大幅成長。2011年起，國民黨政府更進一步開放中國旅客來台自由行，又使中國客再創一波高峰。之後，中國旅客穩定成長，至2015年達343萬人次，創下歷史新高。然而，在2016年民進黨政府執政後，中國則採消極抵制策略、限縮團客數，導致遊客人數銳減近4成。
+                    </p>
+                </section>
+                <section id="aldgate">
+                    <h2>南韓</h2>
+                    <p>
+                        韓國遊客則是來台觀光客增幅最大的國家之一，也是台灣政府著力於開拓的亞洲市場。在2009年時，韓國以觀光為目的的旅客一年僅64,794人，但到2018年則有82萬3620人，十年間平均成長率達28.94%。其中，2013年起成長幅度更加顯著。駐韓代表處表示，主要原因受惠於韓國電視臺旅遊綜藝節目「花漾爺爺」引起的台灣旅遊熱潮，以及台灣政府致力於韓國觀光節目中的影視行銷。然而，由於花蓮是韓國客必訪地區，2018年的花蓮地震則重創韓國客的來台意願。
+                    </p>
+                </section>
+                <section id="london-bridge">
+                    <h2>日本</h2>
+                    <p>
+                        Holmes and Watson's investigations take them across London. Sherlock
+                        deduces that West was murdered elsewhere, then moved to Aldgate
+                        Station to create the illusion that he was crushed on the tracks by
+                        a train. On their way to Woolwich Sherlock dispatches a telegram to
+                        Mycroft at London Bridge: "Send list of all foreign spies known to
+                        be in England, with full address."
+                    </p>
+                </section>
+                <section id="woolwich">
+                    <h2>香港</h2>
+                    <p>
+                        While investigating at Woolwich Arsenal Sherlock learns that West
+                        did not have the three keys&mdash;door, office, and
+                        safe&mdash;necessary to steal the papers. The train station clerk
+                        mentions seeing an agitated West boarding the 8:15 train to London
+                        Bridge. Sherlock suspects West of following someone who had access
+                        to the Woolwich chief's keyring with all three keys.
+                    </p>
+                </section>
+                <section id="gloucester">
+                    <h2>澳門</h2>
+                    <p>
+                        Mycroft responds to Sherlock's telegram and mentions several spies.
+                        Hugo Oberstein of 13 Caulfield Gardens catches Sherlock's eye. He
+                        heads to the nearby Gloucester Road station to investigate and
+                        learns that the windows of Caulfield Gardens open over rail tracks
+                        where trains stop frequently.
+                    </p>
+                </section>
+                <section id="caulfield-gardens">
+                    <h3>越南</h3>
+                    <p>
+                        Holmes deduces that the murderer placed West atop a stopped train at
+                        Caulfield Gardens. The train traveled to Aldgate Station before
+                        West's body finally toppled off. Backtracking to the criminal's
+                        apartment, Holmes finds a series of classified ads from
+                        <em>The Daily Telegraph</em> stashed away. All are under the name
+                        Pierrot: "Monday night after nine. Two taps. Only ourselves. Do not
+                        be so suspicious. Payment in hard cash when goods delivered."
+                    </p>
+                </section>
+                <section id="telegraph">
+                    <h3>菲律賓</h3>
+                    <p>
+                        Holmes and Watson head to The Daily Telegraph and place an ad to
+                        draw out the criminal. It reads: "To-night. Same hour. Same place.
+                        Two taps. Most vitally important. Your own safety at stake.
+                        Pierrot." The trap works and Holmes catches the criminal: Colonel
+                        Valentine Walter, the brother of Woolwich Arsenal's chief. He
+                        confesses to working for Hugo Oberstein to obtain the submarine
+                        plans in order to pay off his debts.
+                    </p>
+                </section>
+                <section id="charing-cross">
+                    <h3>馬來西亞</h3>
+                    <p>
+                        Walter writes to Oberstein and convinces him to meet in the smoking
+                        room of the Charing Cross Hotel where he promises additional plans
+                        for the submarine in exchange for money. The plan works and Holmes
+                        and Watson catch both criminals.
+                    </p>
+                    <small id="citation">
+                        Adapted from
+                        <a href="http://www.gutenberg.org/files/2346/2346-h/2346-h.htm">Project Gutenberg</a>
+                    </small>
+                </section>
             </div>
         </div>
 
@@ -167,6 +268,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="script/animate.js"></script>
     <script src="script/scrolling.js"></script>
+    <script src="script/mapbox.js"></script>
     <!-- Chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
     <script src="script/chart.js"></script>

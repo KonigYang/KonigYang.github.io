@@ -153,13 +153,14 @@ text = "name,type,value,date\n\
 
 var ranking_chart_show = false;
 $(window).scroll(function () {
-    if (isScrolledIntoView('#ranking_chart')) {
+    if (isScrolledIntoView('#ranking-chart-text')) {
         if (ranking_chart_show) {
             return;
         }
         ranking_chart_show = true;
         var data = d3.csvParse(text);
-        draw(data);
+        draw(data);  
+
     } else{
         ranking_chart_show = false;
         $("#ranking_chart").empty();

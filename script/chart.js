@@ -36,7 +36,7 @@ $(window).scroll(function () {
                 data: {
                     labels: ["觀光", "業務","探親","會議","求學","醫療","展覽"], // 標題
                     datasets: [{
-                        label: "", // 標籤
+                        label: "旅臺人次", // 標籤
                         data: [53773516,5998463,2495204,521268,505488,383382,78636], // 資料
                         backgroundColor: [ // 背景色
                         'rgb(255, 0, 0)',
@@ -53,7 +53,8 @@ $(window).scroll(function () {
                 },
                 options: {
                     legend: {
-                        display: false
+                        display: true,
+                        position: 'bottom',
                     },
                     animation: {
                         duration: 1000,
@@ -62,6 +63,9 @@ $(window).scroll(function () {
                     scales: {
                         xAxes: [{
                             ticks: {
+                                callback: function(value, index, values){
+                                    return value / 1e6 +'M';
+                                },
                                 fontSize: 15,
                                 fontFamily: "DFKai-SB",
                             }
