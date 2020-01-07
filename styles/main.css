@@ -15,6 +15,10 @@ h3 {
     font-weight: bold;
 }
 
+h5 {
+    font-family: "DFKai-SB";
+}
+
 header.masthead {
     position: relative;
     background: url("../assets/images/cover.jpg") no-repeat center center;

@@ -142,10 +142,9 @@ var event3_show = false;
 var all_event_show = false;
 
 $(window).scroll(function () {
-    if ($(window).scrollTop() >= $('#event1').offset().top - 200 && $(window).scrollTop() < $('#event2').offset().top - 200) {
+    if ($(window).scrollTop() >= $('#event1').offset().top - 200 && $(window).scrollTop() < $('#event3').offset().top - 200) {
 
         all_event_show = false;
-        event2_show = false;
         event3_show = false;
 
         if (event1_show) {
@@ -168,38 +167,11 @@ $(window).scroll(function () {
             fill: false,
         }]
         myChart.options.animation.duration=0;
-        myChart.update();
-    } else if ($(window).scrollTop() >= $('#event2').offset().top - 200 && $(window).scrollTop() < $('#event3').offset().top - 200) {
-
-        all_event_show = false;
-        event1_show = false;
-        event3_show = false;
-
-        if (event2_show) {
-            return;
-        }
-
-        event2_show = true;
-        myChart.data.datasets = [{
-            label: '',
-            data: [4395004, 5567277, 6087484, 7311470, 8016280, NaN, 10439785, 10690279, 10739601, 11066707],
-            borderColor: window.chartColors.grey,
-            backgroundColor: 'rgba(0, 0, 0, 0)',
-            fill: false,
-            cubicInterpolationMode: 'monotone'
-        }, {
-            label: '',
-            data: [NaN, NaN, NaN, NaN, 8016280, 9910204, 10439785, NaN, NaN, NaN],
-            borderColor: window.chartColors.red,
-            backgroundColor: 'rgba(0, 0, 0, 0)',
-            fill: false,
-        }]
-        myChart.update();
+        myChart.update(); 
     } else if ($(window).scrollTop() >= $('#event3').offset().top - 200) {
 
         all_event_show = false;
         event1_show = false;
-        event2_show = false;
 
         if (event3_show) {
             return;
@@ -223,7 +195,6 @@ $(window).scroll(function () {
         myChart.update();
     } else {
         event1_show = false;
-        event2_show = false;
         event3_show = false;
 
         if (all_event_show) {
