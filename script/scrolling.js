@@ -3,14 +3,13 @@ $(document).ready(function () {
 var height = $(window).height();
 var tofix1_height = $('#container-2-2').offset().top; //Reserve the original height
 var tofix0_height = $('#event3').offset().top;
-console.log(tofix0_height);
 var release1_height = $('#container3').offset().top;
 var tofix2_height = $('#map').offset().top;
 $(window).scroll(function () {
     var current_pos = $(this).scrollTop();
-
+    console.log(current_pos,tofix1_height);
     // bar-height+margin bottom of last row = 57+5=62
-    if (current_pos >= tofix1_height +50 && current_pos < release1_height - height*2/3) {
+    if (current_pos >= tofix1_height-63.6 && current_pos < release1_height - height*2/3) {
         $('#container-2-1').addClass('fixed');
         $('#container-2-1').removeClass('zoomout-animation');
         $('#container-2-2').removeClass('zoomout-animation');

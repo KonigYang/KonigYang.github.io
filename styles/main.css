@@ -72,7 +72,7 @@ hr.topdivider {
     animation-name: emerge;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
 
@@ -117,7 +117,7 @@ hr.topdivider {
 /* Part2-1*/
 .fixed {
     position: fixed !important;
-    top: 62px;
+    top: 63.6px;
     z-index: 10;
 }
 

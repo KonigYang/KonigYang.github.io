@@ -1,10 +1,10 @@
 // Check if it's time to start the animation.
 function checkZoomIn() {
-    var $elem1 = $('.text-emerge1');
+    //var $elem1 = $('.text-emerge1');
     var $elem2 = $('.text-emerge2');
     // If the animation has already been started
     //if ($elem.hasClass('start')) return;
-
+    /*
     if (isScrolledIntoView($elem1)) {
         // Start the animation
         $elem1.addClass('text-emerge-animation');
@@ -12,6 +12,7 @@ function checkZoomIn() {
     else{
         $elem1.removeClass('text-emerge-animation');
     }
+    */
     if (isScrolledIntoView($elem2)) {
         // Start the animation
         $elem2.addClass('text-emerge-animation-slow');
