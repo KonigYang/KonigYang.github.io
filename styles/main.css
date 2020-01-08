@@ -81,6 +81,13 @@ hr.topdivider {
     animation-fill-mode: forwards;
 }
 
+.container-emerge-animation {
+    animation-name: emerge;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
 @keyframes emerge {
     from {
         opacity: 0;
@@ -99,6 +106,13 @@ hr.topdivider {
     animation-fill-mode: forwards;
 }
 
+.zoomout-fast {
+    animation-name: zoomout;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
 @keyframes zoomout {
     from {
         opacity: 1;
@@ -161,9 +175,10 @@ hr.topdivider {
 
 /* Part4 mapbox */
 #map {
-    top: 50px;
+    top: 60px;
     bottom: 0;
     width: 70%;
+    height: 100%;
 }
 
 #features {
@@ -190,3 +205,12 @@ section:last-child {
     border-bottom: none;
     margin-bottom: 200px;
 }
+
+.enlarge {
+    min-height: 500px;
+}
+
+.abs2rel{
+    padding-bottom: 500px;
+}
+

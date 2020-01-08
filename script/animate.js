@@ -2,6 +2,8 @@
 function checkZoomIn() {
     //var $elem1 = $('.text-emerge1');
     var $elem2 = $('.text-emerge2');
+    var $elem3 = $('#container5');
+    var $elem4 = $('#container5-index');
     // If the animation has already been started
     //if ($elem.hasClass('start')) return;
     /*
@@ -19,6 +21,20 @@ function checkZoomIn() {
     }
     else{
         $elem2.removeClass('text-emerge-animation-slow');
+    }
+    if (isScrolledIntoView($elem3)) {
+        // Start the animation
+        $elem3.addClass('container-emerge-animation');
+    }
+    else{
+        $elem3.removeClass('container-emerge-animation');
+    }
+    if (isScrolledIntoView($elem4)) {
+        // Start the animation
+        $elem4.addClass('container-emerge-animation');
+    }
+    else{
+        $elem4.removeClass('container-emerge-animation');
     }
 }
 
