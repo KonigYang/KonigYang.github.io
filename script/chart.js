@@ -34,10 +34,10 @@ $(window).scroll(function () {
                 // 參數設定[註1]
                 type: "horizontalBar", // 圖表類型
                 data: {
-                    labels: ["觀光", "業務","探親","會議","求學","醫療","展覽"], // 標題
+                    labels: ["觀光", "業務", "探親", "會議", "求學", "醫療", "展覽"], // 標題
                     datasets: [{
                         label: "旅臺人次", // 標籤
-                        data: [53773516,5998463,2495204,521268,505488,383382,78636], // 資料
+                        data: [53773516, 5998463, 2495204, 521268, 505488, 383382, 78636], // 資料
                         backgroundColor: [ // 背景色
                         'rgb(255, 0, 0)',
                         'rgb(255, 111, 111)',
@@ -63,8 +63,8 @@ $(window).scroll(function () {
                     scales: {
                         xAxes: [{
                             ticks: {
-                                callback: function(value, index, values){
-                                    return value / 1e6 +'M';
+                                callback: function (value, index, values) {
+                                    return value / 1e6 + 'M';
                                 },
                                 fontSize: 15,
                                 fontFamily: "DFKai-SB",
@@ -110,7 +110,7 @@ var myChart = new Chart(Traveler_num_chart, {
             xAxes: [{
                 gridLines: {
                     display: false,
-                },    
+                },
             }],
             yAxes: [{
                 ticks: {
@@ -166,8 +166,8 @@ $(window).scroll(function () {
             backgroundColor: 'rgba(0, 0, 0, 0)',
             fill: false,
         }]
-        myChart.options.animation.duration=0;
-        myChart.update(); 
+        myChart.options.animation.duration = 0;
+        myChart.update();
     } else if ($(window).scrollTop() >= $('#event3').offset().top - 200) {
 
         all_event_show = false;
@@ -212,3 +212,26 @@ $(window).scroll(function () {
         myChart.update();
     }
 })
+
+
+function displayLineChart() {
+    var data1 = {
+        labels: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+        datasets: [
+
+            {
+                label: "My Second dataset",
+                fillColor: "rgba(151,187,205,0.2)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: [539106, 1228086, 1290933, 2019757, 2263635, 3393346, 3437425, 2845547, 2093548, 2045644]
+                    }
+                ]
+    };
+    var ctx4 = document.getElementById("lineChart").getContext("2d");
+    var options = {};
+    var lineChart = new Chart(ctx4).Line(data1, options);
+}

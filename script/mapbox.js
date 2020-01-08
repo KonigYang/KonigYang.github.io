@@ -12,7 +12,7 @@ var chapters = {
     'load_map': {
         bearing: 0,
         center: [104.54, 33.85],
-        zoom: 1,
+        zoom: 3,
         pitch: 20
     },
     'baker': {
@@ -23,47 +23,45 @@ var chapters = {
     },
     'aldgate': {
         duration: 4000,
-        center: [127.88, 36.45],
+        center: [124.55, 31.12],
         bearing: 0,
-        zoom: 6,
+        zoom: 4.38,
         pitch: 20
     },
     'london-bridge': {
         duration: 4000,
-        center: [137.67, 38.43],
+        center: [132.15, 33.69],
         bearing: 0,
-        zoom: 5,
+        zoom: 4.08,
         pitch: 20
     },
     'woolwich': {
         duration: 4000,
-        center: [114.122, 22.384],
-        zoom: 9.6,
-        pitch: 20
-    },
-    'gloucester': {
-        bearing: 0,
-        center: [113.544533, 22.198147],
-        zoom: 12,
+        center: [116.882, 22.463],
+        zoom: 5.78,
         pitch: 20
     },
     'caulfield-gardens': {
-        bearing: 180,
-        center: [-0.19684993, 51.5033856],
-        zoom: 12.3
+        duration: 4000,
+        bearing: 0,
+        center: [112.28, 17.16],
+        zoom: 4.7,
+        pitch: 20
     },
     'telegraph': {
-        bearing: 90,
-        center: [-0.10669358, 51.51433123],
-        zoom: 17.3,
-        pitch: 40
+        duration: 4000,
+        bearing: 0,
+        center: [119.53, 16.73],
+        zoom: 4.5,
+        pitch: 20
     },
     'charing-cross': {
-        bearing: 90,
-        center: [-0.12416858, 51.50779757],
-        zoom: 14.3,
+        duration: 4000,
+        bearing: 0,
+        center: [109.88, 12.21],
+        zoom: 4.2,
         pitch: 20
-    }
+    },
 };
 
 // On every scroll event, check which element is on screen
@@ -95,5 +93,5 @@ function isElementOnScreen(id) {
     var element = document.getElementById(id);
     var bounds = element.getBoundingClientRect();
     //need to update
-    return bounds.top < window.innerHeight+100 && bounds.bottom > 150;
+    return bounds.top < window.innerHeight + 100 && bounds.bottom > 150;
 }
