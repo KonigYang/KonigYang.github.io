@@ -4,6 +4,7 @@ function checkZoomIn() {
     var $elem2 = $('.text-emerge2');
     var $elem3 = $('#container5');
     var $elem4 = $('#container5-index');
+    var $elem5 = $('#container3-text');
     // If the animation has already been started
     //if ($elem.hasClass('start')) return;
     /*
@@ -34,7 +35,14 @@ function checkZoomIn() {
         $elem4.addClass('container-emerge-animation');
     }
     else{
-        $elem4.removeClass('container-emerge-animation');
+        $elem4.removeClass('text-emerge-animation-slow');
+    }
+    if (isScrolledIntoView($elem5)) {
+        // Start the animation
+        $elem5.addClass('text-emerge-animation-delay');
+    }
+    else{
+        $elem5.removeClass('text-emerge-animation-delay');
     }
 }
 

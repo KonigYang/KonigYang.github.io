@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 var height = $(window).height();
 var tofix1_height = $('#container-2-index').offset().top; 
-tofix1_height = 1847.6;
+tofix1_height = 1837.6;
 //Reserve the original height
 var tofix0_height = $('#event3').offset().top;
 var release1_height = $('#container3').offset().top;

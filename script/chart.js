@@ -129,7 +129,7 @@ var myChart = new Chart(Traveler_num_chart, {
         },
         elements: {
             point: {
-                radius: 0
+                radius: 4
             }
         }
     },
