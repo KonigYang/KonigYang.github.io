@@ -1,7 +1,9 @@
 $(document).ready(function () {
 
 var height = $(window).height();
-var tofix1_height = $('#container-2-index').offset().top; //Reserve the original height
+var tofix1_height = $('#container-2-index').offset().top; 
+tofix1_height = 1847.6;
+//Reserve the original height
 var tofix0_height = $('#event3').offset().top;
 var release1_height = $('#container3').offset().top;
 var release2_height =
@@ -11,6 +13,7 @@ var tofix2_height = $('#map').offset().top;
 $(window).scroll(function () {
     var current_pos = $(this).scrollTop();
     // bar-height+margin bottom of last row = 57+5=62
+    console.log(tofix1_height);
     if (current_pos >= tofix1_height && current_pos < release1_height - height*2/3) {
         $('#container-2-1').addClass('fixed');
         $('#container-2-1').removeClass('zoomout-animation');

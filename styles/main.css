@@ -16,7 +16,9 @@ h3 {
 }
 
 h5 {
-    font-family: "DFKai-SB";
+    font-family: 'Noto Sans TC','Helvetica','Microsoft JhengHei','微軟正黑體';
+    line-height: 1.5;
+    
 }
 
 header.masthead {
@@ -132,6 +134,8 @@ hr.topdivider {
     margin-left: auto;
     margin-right: auto;
 }
+
+
 
 /* Part2-1*/
 .fixed {
